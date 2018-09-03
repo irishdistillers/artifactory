@@ -20,6 +20,3 @@ galaxy_info:
     - development
     - packaging
     - web
-
-dependencies:
-  - dockpack.base_java8
