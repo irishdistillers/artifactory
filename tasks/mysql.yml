@@ -14,8 +14,9 @@
   mysql_db:
     name: artdb
     state: present
-    login_user: root
-    login_password: "{{ mysql_root_password }}"
+    login_host: "{{ mysql_host }}" 
+    login_user: "{{ mysql_admin_user }}" 
+    login_password: "{{ mysql_admin_pass }}" 
   tags:
     - artifactory
 
@@ -24,8 +25,9 @@
     name: "{{ artifactory_username }}"
     priv: "artdb.*:ALL"
     password: "{{ artifactory_password }}"
-    login_user: root
-    login_password: "{{ mysql_root_password }}"
+    login_host: "{{ mysql_host }}" 
+    login_user: "{{ mysql_admin_user }}" 
+    login_password: "{{ mysql_admin_pass }}" 
   tags:
     - artifactory
 

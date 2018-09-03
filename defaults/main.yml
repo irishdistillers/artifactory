@@ -13,8 +13,11 @@ artifactory_data_derby_path: "/opt/artifactory/derby"
 
 # Select one or the other, postgres is in the test set.
 artifactory_database: postgresql
+artifactory_database_host: localhost
 # artifactory_database: mysql
-# mysql_root_password: test_password
+mysql_host: localhost
+mysql_admin_user: root
+mysql_admin_pass: ""
 
 artifactory_url: "https://bintray.com/artifact/download/jfrog/artifactory/jfrog-artifactory-{{ artifactory_license }}-{{ artifactory_version }}.zip"
 artifactory_file: "artifactory-{{ artifactory_version }}.zip"
